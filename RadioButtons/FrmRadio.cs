@@ -39,5 +39,10 @@ namespace RadioButtons
             PicHappy.Visible = false;
             PicSad.Visible = true;
         }
+
+        private void FrmRadio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

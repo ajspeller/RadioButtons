@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRadio));
             this.GrpMood = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RdoHappy = new System.Windows.Forms.RadioButton();
             this.RdoSad = new System.Windows.Forms.RadioButton();
+            this.RdoHappy = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.PicSad = new System.Windows.Forms.PictureBox();
             this.PicHappy = new System.Windows.Forms.PictureBox();
             this.GrpMood.SuspendLayout();
@@ -52,14 +52,17 @@
             this.GrpMood.Text = "Moods";
             this.GrpMood.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox2
+            // RdoSad
             // 
-            this.groupBox2.Location = new System.Drawing.Point(36, 217);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(234, 163);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Weather";
+            this.RdoSad.AutoSize = true;
+            this.RdoSad.Location = new System.Drawing.Point(26, 87);
+            this.RdoSad.Name = "RdoSad";
+            this.RdoSad.Size = new System.Drawing.Size(44, 17);
+            this.RdoSad.TabIndex = 1;
+            this.RdoSad.TabStop = true;
+            this.RdoSad.Text = "Sad";
+            this.RdoSad.UseVisualStyleBackColor = true;
+            this.RdoSad.CheckedChanged += new System.EventHandler(this.RdoSad_CheckedChanged);
             // 
             // RdoHappy
             // 
@@ -73,17 +76,14 @@
             this.RdoHappy.UseVisualStyleBackColor = true;
             this.RdoHappy.CheckedChanged += new System.EventHandler(this.RdoHappy_CheckedChanged);
             // 
-            // RdoSad
+            // groupBox2
             // 
-            this.RdoSad.AutoSize = true;
-            this.RdoSad.Location = new System.Drawing.Point(26, 87);
-            this.RdoSad.Name = "RdoSad";
-            this.RdoSad.Size = new System.Drawing.Size(44, 17);
-            this.RdoSad.TabIndex = 1;
-            this.RdoSad.TabStop = true;
-            this.RdoSad.Text = "Sad";
-            this.RdoSad.UseVisualStyleBackColor = true;
-            this.RdoSad.CheckedChanged += new System.EventHandler(this.RdoSad_CheckedChanged);
+            this.groupBox2.Location = new System.Drawing.Point(36, 217);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(234, 163);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Weather";
             // 
             // PicSad
             // 
@@ -120,6 +120,7 @@
             this.Name = "FrmRadio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Radio Button Example";
+            this.Load += new System.EventHandler(this.FrmRadio_Load);
             this.GrpMood.ResumeLayout(false);
             this.GrpMood.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicSad)).EndInit();
